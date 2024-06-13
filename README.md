@@ -1,27 +1,33 @@
-# UserManagement
+User Management System
+This is a simple User Management System built with Angular 14 and Angular Material.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
+Features
+Display a list of users with pagination and sorting.
+Add new users with form validation.
+Edit existing users.
+Delete users with a confirmation dialog.
+Search users by name or email.
+Manage user roles.
+Setup
+Clone the repository:
 
-## Development server
+git clone <repository-url>
+cd user_Management
+Install dependencies:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+npm install
+Run the application:
 
-## Code scaffolding
+ng serve
+Open your browser and navigate to http://localhost:4200.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Dependencies
+Angular 14
+Angular Material
+Usage
+The application allows you to manage users with the following functionalities:
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+User List: View and search users, and sort them by name and email.
+Add User: Add a new user with name, email, and role.
+Edit User: Edit user details.
+Delete User: Delete a user with confirmation.
