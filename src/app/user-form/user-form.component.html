@@ -1,0 +1,26 @@
+<div>
+    <h1>{{isEditMode ? 'Edit User' : 'Add User'}}</h1>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput placeholder="Name" formControlName="name" required>
+        <mat-error *ngIf="userForm.controls['name'].hasError('required')">Name is required</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput placeholder="Email" formControlName="email" required>
+        <mat-error *ngIf="userForm.controls['email'].hasError('required')">Email is required</mat-error>
+        <mat-error *ngIf="userForm.controls['email'].hasError('email')">Invalid email</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-select placeholder="Role" formControlName="role" required>
+          <mat-option value="User">User</mat-option>
+          <mat-option value="Admin">Admin</mat-option>
+        </mat-select>
+        <mat-error *ngIf="userForm.controls['role'].hasError('required')">Role is required</mat-error>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid">Save</button>
+    </form>
+  </div>
+  
